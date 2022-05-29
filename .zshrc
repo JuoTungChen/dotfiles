@@ -81,7 +81,6 @@ plugins=(
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	zsh-completions
 )
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
