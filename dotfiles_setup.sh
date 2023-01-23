@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install git zsh vim
-sudo apt-get install git-all zsh vim tmux
+sudo apt-get install git-all zsh vim-gtk3 tmux
 chsh -s $(which zsh)    # set zsh as default shell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"   # install oh-my-zsh
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k       # install powerlevel10k
