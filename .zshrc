@@ -81,6 +81,7 @@ plugins=(
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
+	dirhistory
 )
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
@@ -116,3 +117,7 @@ source ~/Documents/dotfiles/alias.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source /opt/ros/galactic/setup.zsh
+source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+source /usr/share/colcon_cd/function/colcon_cd.sh
+export _colcon_cd_root=/opt/ros/galactic
