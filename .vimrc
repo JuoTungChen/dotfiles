@@ -58,3 +58,50 @@ set guifont=Roboto\ Mono\ 14
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+
+ " Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+	  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+	      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+ " Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs),'!isdirectory(v:val.dir)'))
+ \| PlugInstall --sync | source $MYVIMRC
+ \| endif
+
+ " install plugins
+call plug#begin()
+  Plug 'preservim/nerdtree'
+call plug#end()
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+	    \ Plug 'tiagofumo/vim-nerdtree-syntax-highlight' |
+            \ Plug 'ryanoasis/vim-devicons'
+
+
+set encoding=UTF-8
+
+"" NERDTREE PLUGIN 
+ " shortcuts for NerdTree
+ nnoremap <leader>n :NERDTreeFocus<CR>
+ nnoremap <C-n> :NERDTree<CR>
+ nnoremap <C-t> :NERDTreeToggle<CR>
+ nnoremap <C-f> :NERDTreeFind<CR>
+
+ " Start NERDTree when Vim starts with a directory argument.
+ autocmd StdinReadPre * let s:std_in=1
+ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+     \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+ " Exit Vim if NERDTree is the only window remaining in the only tab.
+ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+
+" Highlight struct / class member variables
+let g:cpp_member_highlight = 1
+
+" Put all standard C and C++ keywords under Vim's highlight group 'Statement'
+" (affects both C and C++ files)
+let g:cpp_simple_highlight = 1
+
