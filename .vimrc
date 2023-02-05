@@ -54,7 +54,7 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
 colorscheme monokai
 
-set guifont=Roboto\ Mono\ 14
+set guifont=Fira\ Code:h12
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
@@ -78,7 +78,7 @@ call plug#end()
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
 	    \ Plug 'tiagofumo/vim-nerdtree-syntax-highlight' |
-            \ Plug 'ryanoasis/vim-devicons'
+            \ Plug 'ryanoasis/vim-devicons' 
 
 
 set encoding=UTF-8
