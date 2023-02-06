@@ -1,0 +1,191 @@
+{
+    "code-runner.runInTerminal": true,
+    "git.confirmSync": false,
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true, // removes minimap
+    "editor.renderWhitespace": "none", // removes indent guides
+    "editor.renderLineHighlight": "none", // removes line highlight
+    "editor.overviewRulerBorder": false, // removes border from overview ruler (located on the right, same position as the scrollbar)
+    "editor.hideCursorInOverviewRuler": true, // hides cursor mark in the overview ruler
+    "editor.folding": false, // removes the folding feature
+    "editor.occurrencesHighlight": false, // removes highlights occurrences (still works when you select a word)
+    // "editor.matchBrackets": false, // removes the highlight of matching brackets (I use Subtle Match Brackets extension for this)
+    "editor.glyphMargin": false, // removes the space used mainly for debugging indicators
+    "explorer.openEditors.visible": 0, // removes the open editors section at the top of the sidebar, you can see the opened files with ⌘ + ⌥ + Tab
+    "workbench.activityBar.visible": false, // removes the activity bar (the 4 icons at the left of the screen), so now you will have to open the explorer, git, debugger and extension with shortcuts or through the Command Palette
+    "workbench.editor.showIcons": false, // removes icon from opened files in tabs
+    "workbench.editor.tabCloseButton": "off", // removes cross icon from tabs
+    "workbench.statusBar.visible": false, // removes the status bar
+    "indenticator.color.dark": "rgba(255,255,255,.1)", // adds a subtle indent guide (needs Indenticator extension)
+    // "workbench.colorCustomizations": { // object that allows you to customize your color theme: https://code.visualstudio.com/docs/getstarted/theme-color-reference 
+    //   "tab.activeBorder": "#0000" // removes border to highlight active tabs (the colors formats are: #RGB, #RGBA, #RRGGBB or #RRGGBBAA)
+    // },
+    
+    // "editor.fontFamily": "Fira Code",
+    "editor.fontWeight": "500",
+    "editor.fontSize": 16,
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    // "terminal.external.osxExec": "iTerm.app",
+    // "terminal.integrated.fontFamily": "MesloLGS NF",
+    "bracketPairColorizer.depreciation-notice": false,
+
+
+    "latex-workshop.bibtex-format.sort.enabled": true,
+    "latex-workshop.bibtex-format.align-equal.enabled": true,
+    "latex-workshop.bibtex-format.sortby": [
+        "booktitle",
+        "journal",
+        "title",
+        "year",
+    ],
+    "latex-workshop.bibtex-fields.sort.enabled": true,
+    "latex-workshop.bibtex-fields.order": [
+        "title",
+        "author",
+        "key",
+        "booktitle",
+        "journal",
+        "year",
+        "volume",
+        "number",
+        "pages",
+        "publisher",
+        "address",
+        "editor",
+        "edition",
+        "translator",
+    ],
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk"
+    ],
+    "latex-workshop.latex.recipe.default": "pdflatex*2",
+    "latex-workshop.latex.recipes": [
+        {
+        "name": "pdflatex*2",
+        "tools": [
+            "pdflatex",
+            "pdflatex"
+        ]
+        },
+        {
+        "name": "xelatex*2",
+        "tools": [
+            "xelatex",
+            "xelatex"
+        ]
+        },
+        {
+        "name": "pdflatex -> bibtex -> pdflatex*2",
+        "tools": [
+            "pdflatex",
+            "bibtex",
+            "pdflatex",
+            "pdflatex"
+        ]
+        },
+        {
+        "name": "xelatex -> bibtex -> xelatex*2",
+        "tools": [
+            "xelatex",
+            "bibtex",
+            "xelatex",
+            "xelatex"
+        ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+        "name": "xelatex",
+        "command": "xelatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "-outdir=%OUTDIR%",
+            "%DOC%"
+        ],
+        "env": {}
+        },
+        {
+        "name": "pdflatex",
+        "command": "pdflatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+        ],
+        "env": {}
+        },
+        {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": [
+            "%DOCFILE%"
+        ],
+        "env": {}
+        }
+    ],
+    "latex-workshop.message.badbox.show": false,
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.matchBrackets": "never",
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
+    "editor.guides.indentation": false,
+    "workbench.colorCustomizations": {
+        "[Material Theme Darker High Contrast]": {
+            "activityBarBadge.background": "#2979FF",
+            "activityBar.activeBorder": "#2979FF",
+            "list.activeSelectionForeground": "#2979FF",
+            "list.inactiveSelectionForeground": "#2979FF",
+            "list.highlightForeground": "#2979FF",
+            "scrollbarSlider.activeBackground": "#2979FF50",
+            "editorSuggestWidget.highlightForeground": "#2979FF",
+            "textLink.foreground": "#2979FF",
+            "progressBar.background": "#2979FF",
+            "pickerGroup.foreground": "#2979FF",
+            "tab.activeBorder": "#2979FF",
+            "notificationLink.foreground": "#2979FF",
+            "editorWidget.resizeBorder": "#2979FF",
+            "editorWidget.border": "#2979FF",
+            "settings.modifiedItemIndicator": "#2979FF",
+            "settings.headerForeground": "#2979FF",
+            "panelTitle.activeBorder": "#2979FF",
+            "breadcrumb.activeSelectionForeground": "#2979FF",
+            "menu.selectionForeground": "#2979FF",
+            "menubar.selectionForeground": "#2979FF",
+            "editor.findMatchBorder": "#2979FF",
+            "selection.background": "#2979FF40",
+            "statusBarItem.remoteBackground": "#2979FF"
+        }
+    },
+    "materialTheme.accent": "Blue",
+    "editor.minimap.enabled": false,
+
+
+
+}
