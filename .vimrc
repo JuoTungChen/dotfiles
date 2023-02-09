@@ -77,6 +77,10 @@ call plug#begin()
 call plug#end()
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+            \ Plug 'bfrg/vim-cpp-modern' |
+            \ Plug 'xavierd/clang_complete' |
+            \ Plug 'vim-airline/vim-airline' |
+	    \ Plug 'tpope/vim-commentary' |
 	    \ Plug 'tiagofumo/vim-nerdtree-syntax-highlight' |
             \ Plug 'ryanoasis/vim-devicons' 
 
@@ -105,3 +109,6 @@ let g:cpp_member_highlight = 1
 " (affects both C and C++ files)
 let g:cpp_simple_highlight = 1
 
+
+" clang_complete
+let g:clang_library_path='/usr/lib/llvm-10/lib/libclang-10.so.1'
