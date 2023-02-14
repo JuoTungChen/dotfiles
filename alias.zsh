@@ -9,6 +9,8 @@ alias tmuxconfig="vim ~/.tmux.conf"
 alias gs="git status"
 alias gc="git commit"
 alias v="vim"
+alias sss="source install/setup.zsh"
+alias rr="ros2 run"
 
 # Save you from mistyping
 alias sl="ls"
